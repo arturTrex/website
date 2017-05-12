@@ -1,0 +1,19 @@
+/* css style settings for main.html page */
+html, body, div, span, canvas {
+    margin: 0;
+    padding: 0;
+}
+#container {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(#005C97, #363795);
+}
+#pixie {
+    z-index:10;
+    position:absolute;
+    top:0;
+    left:0;
+}
