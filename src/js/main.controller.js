@@ -3,6 +3,20 @@
 angular.module('myWebsite')
     .controller('myWebsiteController', function($scope) {
 
+    $scope.clicked = 'About';
+    $scope.tab = 1;
+
+    //changes color for tab headers
+    $scope.changeColor = function(tabName) {
+         $scope.clicked = tabName;
+    };
+
+    //opens profile information
+    $scope.openProfile = function() {
+        $('#container > h1, #container > h2, #container > div > a').addClass('elementHidden');
+        $('.d').addClass('profile');
+    }
+
     //borrowed algorithm from codepen.io link:http://codepen.io/andrewreifman/pen/vgGjb
     var WIDTH,
         HEIGHT,

@@ -1,17 +1,63 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Trex87</a>
+<div class="websiteContent">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Trex87</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">HOME</a></li>
+                <li><a ng-click="openProfile()" style="cursor: pointer;">PROFILE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PROFILE</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
+    </nav>
+    <!-- container for dynamic background goes here -->
+    <div id="container">
+        <canvas id="pixie"></canvas>
+        <h1 style="text-shadow: 0 1px 2px rgba(0,0,0,0.6);">Artur Mukhametyanov</h1>
+        <h2>Web Developer</h2>
+
+        <div>
+            <a><span>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </span></a>
+            <a><span>
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </span></a>
+            <a><span>
+                <i class="fa fa-file-word-o" aria-hidden="true"></i>
+            </span></a>
+            <a><span class="forPlane">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </span></a>
+        </div>
+
     </div>
-</nav>
-<!-- container for dynamic background goes here -->
-<div id="container">
-    <canvas id="pixie"></canvas>
+    <!-- end for container with dynamic background -->
+
+
+    <div class="container col-lg-12 d" style="position:absolute;left:20px;z-index: 100;"> <!-- panel with tabs -->
+        <div id="exTab" class="container col-lg-12">
+
+            <ul class="nav nav-pills" style="cursor: pointer;"> <!-- tabs -->
+                <li class="active"><a ng-click="tab = 1;changeColor('About')"  ng-class="{'makeMeRed':clicked=='About'}" data-toggle="tab" style="color:white;background: rgba(217,217,217,0.9);">About</a></li>
+                <li><a ng-click="tab = 2;changeColor('My Skills')" ng-class="{'makeMeRed':clicked=='My Skills'}" data-toggle="tab" style="color:white; background: rgba(217,217,217,0.9);">My skills</a></li>
+            </ul>
+
+            <div class="tab-content clearfix" style=" border-radius: 5px;height:100px;">
+                <div class="tab-pane active" ng-show="tab==1">
+
+                    <div style="background: #001f3f;height:300px;width:100%;color:white; border-radius: 0 0 50px 50px; border-top: 9px solid #B71427;">Here will go my bio</div>
+
+                </div>
+
+                <div class="tab-pane active" ng-show="tab==2">
+                    <div style="background: #001f3f;height:300px;width:100%;color:white; border-radius: 0 0 50px 50px; border-top: 9px solid #B71427;">Here will go my chart</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 </div>
-<!-- end for container with dynamic background -->

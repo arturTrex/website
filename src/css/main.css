@@ -3,17 +3,130 @@ html, body, div, span, canvas {
     margin: 0;
     padding: 0;
 }
+
 #container {
     overflow: hidden;
     position: relative;
     height: 100%;
     width: 100%;
-
+    background: -webkit-linear-gradient(#005C97, #363795);
+    background: -moz-linear-gradient(#005C97, #363795);
+    background: -o-linear-gradient(#005C97, #363795);
     background: linear-gradient(#005C97, #363795);
 }
-#pixie {
+
+#pixie {            /* settings for dynamic canvas */
     z-index:10;
     position:absolute;
     top:0;
     left:0;
+}
+
+#container > h1,
+#container > h2 {   /* settings for name */
+    display: block;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    width: 500px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+#container > h2 {
+    font-size: 30px;
+    margin-top: 55px;
+}
+
+#container > div {
+    display: block;
+    position: relative;
+    top:50%;
+    margin: 30px auto;
+    width: 300px;
+    padding-left: 10px;
+    animation-name: linksForArtur;
+    animation-duration: 3s;
+}
+
+#container > div > a {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+#container > div > a > span { /* settings for links under the name */
+    padding: 9px 7px;
+    border: 2px solid #D3D3D3;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    color: white;
+    background: #D3D3D3;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+#container > div > a > span > i {
+    position: relative;
+    left: 4px;
+    background: gray;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.forPlane {
+    padding: 9px 9px !important;
+}
+
+.fa-paper-plane {
+    left: 0px !important;
+}
+
+@keyframes linksForArtur {  /* animation for links in home page */
+    from {
+        opacity: 0;
+        right: -400px;
+        }
+    to {
+        opacity: 1;
+        right: 0px;
+
+        }
+}
+
+@keyframes showProfile {
+    from {
+        opacity: 0;
+        top: 100%;
+        }
+    to {
+        opacity: 1;
+        top: 20%;
+        }
+}
+
+@keyframes hideElement {
+    from {
+        opacity: 1;
+        }
+    to {
+        opacity: 0;
+        }
+}
+
+.profile {
+    animation-name: showProfile;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.elementHidden {
+    animation-name: hideElement;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.makeMeRed {    /* ng-class for tabs */
+    background-color: #B71427 !important;
+    font-weight: bold;
 }
