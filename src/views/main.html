@@ -7,7 +7,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="#">HOME</a></li>
                 <li><a ng-click="openProfile()" style="cursor: pointer;">PROFILE</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a ng-click="openContact()" style="cursor: pointer;">CONTACT</a></li>
             </ul>
         </div>
     </nav>
@@ -36,7 +36,7 @@
     <!-- end for container with dynamic background -->
 
 
-    <div class="container col-lg-12 d" style="position:absolute;left:20px;z-index: 100;"> <!-- panel with tabs -->
+    <div class="container col-lg-12 abouts" style="position:absolute;left:20px;z-index: 100;"> <!-- panel with tabs -->
         <div id="exTab" class="container col-lg-12">
 
             <ul class="nav nav-pills" style="cursor: pointer;"> <!-- tabs -->
@@ -58,6 +58,10 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="container col-lg-12 contacts" style="position:absolute;left:0;top:100%;height:400px;background:rgb(29,29,29);z-index: 120;">
+        <h1 style="width:200px;margin: 0 auto;">Contacts</h1>
     </div>
 
 </div>

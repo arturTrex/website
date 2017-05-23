@@ -105,6 +105,15 @@ html, body, div, span, canvas {
         }
 }
 
+@keyframes showContacts {
+    from {
+        top: 100%;
+        }
+    to {
+        top: 5%;
+        }
+}
+
 @keyframes hideElement {
     from {
         opacity: 1;
@@ -117,6 +126,12 @@ html, body, div, span, canvas {
 .profile {
     animation-name: showProfile;
     animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.myContacts {
+    animation-name: showContacts;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 

@@ -14,7 +14,12 @@ angular.module('myWebsite')
     //opens profile information
     $scope.openProfile = function() {
         $('#container > h1, #container > h2, #container > div > a').addClass('elementHidden');
-        $('.d').addClass('profile');
+        $('.abouts').addClass('profile');
+    }
+
+    //opens contact information
+    $scope.openContact = function() {
+        $('.contacts').addClass('myContacts');
     }
 
     //borrowed algorithm from codepen.io link:http://codepen.io/andrewreifman/pen/vgGjb
